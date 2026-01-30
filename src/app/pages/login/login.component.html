@@ -1,0 +1,86 @@
+<div class="parent-div">
+    <div class="login-card animate-fade">
+        <div class="brand-header">
+            <div class="brand-logo">A</div>
+            <h1 class="brand-title">Welcome Back</h1>
+            <p style="color: var(--fg-muted); font-size: 14px; margin-top: 8px;">Managed Registration System</p>
+        </div>
+
+        <div class="toggle-container">
+            <button class="toggle-btn" [class.active]="activeForm === 'login'"
+                (click)="activeForm = 'login'">Login</button>
+            <button class="toggle-btn" [class.active]="activeForm === 'signup'" (click)="activeForm = 'signup'">Sign
+                Up</button>
+        </div>
+
+        <div style="overflow: hidden;">
+            <div class="slider-container" [class.login-view]="activeForm === 'login'"
+                [class.signup-view]="activeForm === 'signup'">
+
+                <!-- Login Section -->
+                <div class="form-box">
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fa fa-envelope-o"></i>
+                            <input type="email" [(ngModel)]="loginObj.emailId" class="form-control"
+                                placeholder="name@company.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <div class="input-wrapper">
+                            <i class="fa fa-lock"></i>
+                            <input type="password" [(ngModel)]="loginObj.password" class="form-control"
+                                placeholder="••••••••">
+                        </div>
+                    </div>
+                    <button class="submit-btn" type="button" (click)="onLogin()">
+                        <span>Sign In</span>
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
+                    <p class="form-footer">
+                        Forgot your password? <a href="#">Reset it</a>
+                    </p>
+                </div>
+
+                <!-- Signup Section -->
+                <div class="form-box">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa fa-user-o"></i>
+                            <input type="text" [(ngModel)]="registerObj.fullName" class="form-control"
+                                placeholder="John Doe">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fa fa-envelope-o"></i>
+                            <input type="email" [(ngModel)]="registerObj.emailId" class="form-control"
+                                placeholder="name@company.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Create Password</label>
+                        <div class="input-wrapper">
+                            <i class="fa fa-lock"></i>
+                            <input type="password" [(ngModel)]="registerObj.password" class="form-control"
+                                placeholder="••••••••">
+                        </div>
+                    </div>
+                    <button type="button" (click)="onRegister()" class="submit-btn"
+                        style="background: linear-gradient(135deg, #10b981, #059669);">
+                        <span>Create Account</span>
+                        <i class="fa fa-check"></i>
+                    </button>
+                    <p class="form-footer">
+                        By signing up, you agree to our <a href="#">Terms</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
