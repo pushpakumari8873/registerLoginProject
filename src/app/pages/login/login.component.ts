@@ -24,6 +24,7 @@ export class LoginComponent {
 
   onRegister() {
     this.regisLoginSrv.registerUser(this.registerObj).subscribe((res: any) => {
+      debugger;
       if (res.result) {
         alert("User Registered Successfully");
         this.activeForm = 'login';

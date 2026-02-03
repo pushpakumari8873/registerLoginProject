@@ -6,6 +6,7 @@ A crisp, high-end implementation of an Angular authentication flow featuring mod
 - **Route Protection**: `loginGuard` ensures only authenticated users access internal pages.
 - **Token Injection**: `tokenInterceptor` automatically attaches `Bearer` tokens to every API call.
 - **Advanced UI**: Dark-mode glassmorphism with smooth sliding form transitions.[using AI ]
+- **Data Visualization**: Implemented **PrimeNG** (third-party library) for rich data display, including a paginated and styled data table on the Dashboard.
 - **Auth Flow**: Integrated Registration and Login using external APIs.
 
 ## 🔑 Credentials & API
